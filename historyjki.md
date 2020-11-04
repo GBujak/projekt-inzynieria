@@ -13,14 +13,20 @@
 
 * Jako uczeń, chcę przystąpić do testu online, aby uzyskać zaliczenie.
 
+* Jako uczeń, chcę pobrać materiały z zajęć, które udostępnili mi nauczyciele, żeby
+    móc się z nich uczyć.
+
 ## Nauczyciel
 
-* Jako nauczyciel chcę wystawiać oceny moim uczniom, aby mierzyć ich progres w nauce.
+* Jako nauczyciel chcę wystawiać oceny moim uczniom, aby mierzyć ich postęp w nauce.
 
 * Jako nauczyciel chcę wystawiać nieobecności uczniom którzy nie uczestniczą w
     zajęciach, żeby sprawdzić jaka jest frekwencja na moich zajęciach.
 
 * Jako nauczyciel chcę mieć dostęp do mojego planu zajęć
+
+* Jako nauczyciel, chcę udostępniać materiały z zajęć swoim uczniom, żeby mogli się z
+    nich uczyć.
 
 ## Dyrektor
 
