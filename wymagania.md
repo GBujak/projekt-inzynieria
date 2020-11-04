@@ -4,7 +4,7 @@
 
 * [Historyjki użytkownika](./historyjki.md)
 
-* [Diagram przypadków użycia](./diagram/diagram_szkola.jpg)
+* [Diagram przypadków użycia](./diagram/diagram_szkola.png)
 
 ## Wymagania niefunkcjonalne
 
