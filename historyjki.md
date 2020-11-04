@@ -43,11 +43,13 @@
 * Jako dyrektor, chcę dysponować środkami finansowymi, aby móc przeznaczać je na np.
     naprawy i modernizację sprzętu szkoły.
 
-* Jako dyrektor, chcę zatwierdzić plan zajęć, aby uczniowie i nauczyciele wiedzieli kiedy mają zajęcia.
+* Jako dyrektor, chcę zatwierdzić plan zajęć, aby uczniowie i nauczyciele wiedzieli
+    kiedy mają zajęcia.
 
 ## Wicedyrektor
 
-* Jako wicedyrektor, chcę być osobą decyzyjną, aby podejmować decyzje, kiedy dyrektor jest nieobecny.
+* Jako wicedyrektor, chcę być osobą decyzyjną, aby podejmować decyzje, kiedy dyrektor
+    jest nieobecny.
 
 ## Planista
 
@@ -55,16 +57,26 @@
 
 * Jako planista, chcę mieć dostęp do planu zajęć, aby móc wprowadzić poprawki.
 
-## Pracownik administracji
+## Pracownik administracji / Księgowa
 
-## Księgowa
+* Jako księgowa chcę wystawić fakturę na usługi, które oferuje szkoła np. wynajęcie
+    sali pod jakieś wydarzenia, warsztaty.
 
-* Jako księgowa chcę wystawić fakturę na usługi, które oferuje szkoła np. wynajęcie sali pod jakieś wydarzenia, warsztaty.
-* Jako księgowa chcę móc dokonywać wypłat wynagrodzeń dla nauczycieli i innych pracowników szkoły za ich pracę.
-* Jako księgowa chcę gromadzić faktury za zakupione przez szkołe materiały, sprzęt i inne rzeczy.
-* Jako księgowa chcę sprawdzać dostępne środki na zakup nowych rzeczy do szkoły i zatwierdzać płatności zgłoszone przez inne osoby(dyrektor, pracownicy).
+* Jako księgowa chcę móc dokonywać wypłat wynagrodzeń dla nauczycieli i innych
+    pracowników szkoły za ich pracę.
+
+* Jako księgowa chcę gromadzić faktury za zakupione przez szkołe materiały, sprzęt i
+    inne rzeczy.
+
+* Jako księgowa chcę sprawdzać dostępne środki na zakup nowych rzeczy do szkoły i
+    zatwierdzać płatności zgłoszone przez inne osoby(dyrektor, pracownicy).
 
 ## Woźny
+
+* Jako woźny, chcę zgłosić potrzebę zakupienia środków czystości, żeby móc utrzymywać
+    czystość w szkole.
+
+* Jako woźny, chcę zgłosić uszkodzony sprzęt, żeby szkoła mogła go wymienić.
 
 * Jako woźny, chcę sprzątać, aby na korytarzach placówki było czysto.
 
@@ -72,4 +84,8 @@
 
 ## Pielęgniarka
 
-* Jako pielęgniarka, chcę udzielić pomocy meczynej, aby zapewnić bezpieczeństwo osobie, która jej potrzebuje.
+* Jako pielęgniarka, chcę zgłosić potrzebę zakupu środków pierwszej pomocy, żeby być
+    w stanie pomagać uczniom.
+
+* Jako pielęgniarka, chcę udzielić pomocy meczynej, aby zapewnić bezpieczeństwo
+    osobie, która jej potrzebuje.
