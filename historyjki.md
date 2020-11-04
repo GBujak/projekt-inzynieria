@@ -9,12 +9,12 @@
 * Jako uczeń, chcę zobaczyć plan lekcji, żeby móc uczestniczyć w zajęciach.
 
 * Jako uczeń, chcę zobaczyć dane kontaktowe prowadzących zajęcia, żeby móc się z nimi
-    skontaktować.
+  skontaktować.
 
 * Jako uczeń, chcę przystąpić do testu online, aby uzyskać zaliczenie.
 
 * Jako uczeń, chcę pobrać materiały z zajęć, które udostępnili mi nauczyciele, żeby
-    móc się z nich uczyć.
+  móc się z nich uczyć.
 
 * Jako uczeń, chcę poprawić niezaliczony materiał, aby poprawić swoje oceny.
 
@@ -23,12 +23,12 @@
 * Jako nauczyciel, chcę wystawiać oceny moim uczniom, aby mierzyć ich postęp w nauce.
 
 * Jako nauczyciel, chcę wystawiać nieobecności uczniom którzy nie uczestniczą w
-    zajęciach, żeby sprawdzić jaka jest frekwencja na moich zajęciach.
+  zajęciach, żeby sprawdzić jaka jest frekwencja na moich zajęciach.
 
 * Jako nauczyciel, chcę mieć dostęp do mojego planu zajęć.
 
 * Jako nauczyciel, chcę udostępniać materiały z zajęć swoim uczniom, żeby mogli się z
-    nich uczyć.
+  nich uczyć.
 
 * Jako nauczyciel, chcę przeprowadzić sprawdzian, aby sprawdzić stan wiedzy uczniów.
 
@@ -41,15 +41,15 @@
 * Jako dyrektor, chcę zatrudniać nauczycieli, aby miał kto uczyć.
 
 * Jako dyrektor, chcę dysponować środkami finansowymi, aby móc przeznaczać je na np.
-    naprawy i modernizację sprzętu szkoły.
+  naprawy i modernizację sprzętu szkoły.
 
 * Jako dyrektor, chcę zatwierdzić plan zajęć, aby uczniowie i nauczyciele wiedzieli
-    kiedy mają zajęcia.
+  kiedy mają zajęcia.
 
 ## Wicedyrektor
 
 * Jako wicedyrektor, chcę być osobą decyzyjną, aby podejmować decyzje, kiedy dyrektor
-    jest nieobecny.
+  jest nieobecny.
 
 ## Planista
 
@@ -60,21 +60,21 @@
 ## Pracownik administracji / Księgowa
 
 * Jako księgowa chcę wystawić fakturę na usługi, które oferuje szkoła np. wynajęcie
-    sali pod jakieś wydarzenia, warsztaty.
+  sali pod jakieś wydarzenia, warsztaty.
 
 * Jako księgowa chcę móc dokonywać wypłat wynagrodzeń dla nauczycieli i innych
-    pracowników szkoły za ich pracę.
+  pracowników szkoły za ich pracę.
 
 * Jako księgowa chcę gromadzić faktury za zakupione przez szkołe materiały, sprzęt i
-    inne rzeczy.
+  inne rzeczy.
 
 * Jako księgowa chcę sprawdzać dostępne środki na zakup nowych rzeczy do szkoły i
-    zatwierdzać płatności zgłoszone przez inne osoby(dyrektor, pracownicy).
+  zatwierdzać płatności zgłoszone przez inne osoby(dyrektor, pracownicy).
 
 ## Woźny
 
 * Jako woźny, chcę zgłosić potrzebę zakupienia środków czystości, żeby móc utrzymywać
-    czystość w szkole.
+  czystość w szkole.
 
 * Jako woźny, chcę zgłosić uszkodzony sprzęt, żeby szkoła mogła go wymienić.
 
@@ -85,7 +85,7 @@
 ## Pielęgniarka
 
 * Jako pielęgniarka, chcę zgłosić potrzebę zakupu środków pierwszej pomocy, żeby być
-    w stanie pomagać uczniom.
+  w stanie pomagać uczniom.
 
 * Jako pielęgniarka, chcę udzielić pomocy meczynej, aby zapewnić bezpieczeństwo
-    osobie, która jej potrzebuje.
+  osobie, która jej potrzebuje.
