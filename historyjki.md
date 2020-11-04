@@ -37,3 +37,12 @@
 
 * Jako dyrektor chcę dysponować środkami finansowymi, aby móc przeznaczać je na np.
     naprawy i modernizację sprzętu szkoły.
+
+## Księgowa
+
+* Jako księgowa chcę wystawić fakturę na usługi, które oferuje szkoła np. wynajęcie sali pod jakieś wydarzenia, warsztaty.
+* Jako księgowa chcę móc dokonywać wypłat wynagrodzeń dla nauczycieli i innych pracowników szkoły za ich pracę.
+* Jako księgowa chcę gromadzić faktury za zakupione przez szkołe materiały, sprzęt i inne rzeczy.
+* Jako księgowa chcę sprawdzać dostępne środki na zakup nowych rzeczy do szkoły i zatwierdzać płatności zgłoszone przez inne osoby(dyrektor, pracownicy).
+
+
