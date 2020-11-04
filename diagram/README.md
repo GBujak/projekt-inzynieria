@@ -1,3 +1,3 @@
 # Diagram przypadków użycia
 
-![diagram](./diagram_szkola.jpg)
+![diagram](./diagram_szkola.png)
