@@ -3,6 +3,7 @@
 ## Średniej wielkości szkoła podstawowa w Kielcach
 
 * Liczba uczniów: 300
+
    Maksymalna liczba uczniów w jednej grupie: 20
 
 * Liczba nauczycieli: 25
