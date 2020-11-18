@@ -11,3 +11,7 @@
 * Pracownicy administracji i obsługi: 10
 
 * Organ sprawujący nadzór pedagogiczny: Świętokrzyski Kurator Oświaty
+
+* Zajęcia prowadzone zdalnie z powodu pandemii.
+
+* Nauczycieli mogą prowadzić zajęcia zdalne ze szkoły.
