@@ -18,6 +18,12 @@
 
 * Jako uczeń, chcę poprawić niezaliczony materiał, aby poprawić swoje oceny.
 
+* Jako uczeń, chcę dać usprawiedliwienie, żeby usprawiedliwić swoją nieobecność na zajęciach.
+
+* Jako uczeń, chcę dostać adres do zajęć online, żeby na nich uczestniczyć.
+
+* Jako uczeń, chcę włączyć kamerę, żeby potwierdzić swoją obecność.
+
 ## Nauczyciel
 
 * Jako nauczyciel, chcę wystawiać oceny moim uczniom, aby mierzyć ich postęp w nauce.
@@ -35,6 +41,8 @@
 * Jako nauczyciel, chcę sprawdzić sprawdzian, aby wystawić uczniowi ocenę cząstkową.
 
 * Jako nauczyciel, chcę wystawić ocenę końcową, aby uczeń ukończył przedmiot.
+
+* Jako nauczyciel, chcę utworzyć spotkanie online, żeby przeprowadzić zajęcia.
 
 ## Dyrektor
 
@@ -78,14 +86,10 @@
 
 * Jako woźny, chcę zgłosić uszkodzony sprzęt, żeby szkoła mogła go wymienić.
 
-* Jako woźny, chcę sprzątać, aby na korytarzach placówki było czysto.
-
-* Jako woźny, chcę wziąć kurtkę od ucznia, aby powiesić ją w szatni.
 
 ## Pielęgniarka
 
 * Jako pielęgniarka, chcę zgłosić potrzebę zakupu środków pierwszej pomocy, żeby być
-  w stanie pomagać uczniom.
+  w stanie pomagać uczniom lub pracownikom szkoły.
 
-* Jako pielęgniarka, chcę udzielić pomocy meczynej, aby zapewnić bezpieczeństwo
-  osobie, która jej potrzebuje.
+* Jako pielęgniarka, chcę zapisać raport z leczenia, żeby udokumentować leczenie.
