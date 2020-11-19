@@ -24,6 +24,10 @@
 
 * Jako uczeń, chcę włączyć kamerę, żeby potwierdzić swoją obecność.
 
+* Jako uczeń, chcę usprawiedliwić nieobecność, żeby nie ponieść za nią konsekwencji.
+
+* Jako uczeń, chcę dołączyć do zajęć online, żeby móc kontaktować się z nauczycielem.
+
 ## Nauczyciel
 
 * Jako nauczyciel, chcę wystawiać oceny moim uczniom, aby mierzyć ich postęp w nauce.
@@ -93,3 +97,5 @@
   w stanie pomagać uczniom lub pracownikom szkoły.
 
 * Jako pielęgniarka, chcę zapisać raport z leczenia, żeby udokumentować leczenie.
+
+* Jako pielęgniarka, chcę zapisać raport z wypadku, żeby udokumentować wypadek.
