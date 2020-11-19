@@ -1109,7 +1109,7 @@
 											"top": 403,
 											"width": 140.89892578125,
 											"height": 13,
-											"text": "+pytania: List<String>",
+											"text": "-pytania: List<String>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -3586,7 +3586,7 @@
 											"top": 1326,
 											"width": 166,
 											"height": 13,
-											"text": "+iloscMiejsc: Integer",
+											"text": "-iloscMiejsc: Integer",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3603,7 +3603,7 @@
 											"top": 1341,
 											"width": 166,
 											"height": 13,
-											"text": "+nazwa: String",
+											"text": "-nazwa: String",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3620,7 +3620,7 @@
 											"top": 1356,
 											"width": 166,
 											"height": 13,
-											"text": "+ostatioSprzatana: Date",
+											"text": "-ostatioSprzatana: Date",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4364,7 +4364,7 @@
 											"top": 1054,
 											"width": 238,
 											"height": 13,
-											"text": "+kwota: Integer",
+											"text": "-kwota: Integer",
 											"horizontalAlignment": 0
 										}
 									],
@@ -6318,7 +6318,7 @@
 											"top": 670,
 											"width": 182,
 											"height": 13,
-											"text": "+odpowiedzi: List<String>",
+											"text": "-odpowiedzi: List<String>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -10247,6 +10247,7 @@
 								"$ref": "AAAAAAF1vl4ftVX0XWE="
 							},
 							"name": "pytania",
+							"visibility": "private",
 							"type": "List<String>"
 						}
 					],
@@ -10504,6 +10505,7 @@
 								"$ref": "AAAAAAF13PPbOwvh2Ao="
 							},
 							"name": "iloscMiejsc",
+							"visibility": "private",
 							"type": "Integer"
 						},
 						{
@@ -10513,6 +10515,7 @@
 								"$ref": "AAAAAAF13PPbOwvh2Ao="
 							},
 							"name": "nazwa",
+							"visibility": "private",
 							"type": "String"
 						},
 						{
@@ -10522,6 +10525,7 @@
 								"$ref": "AAAAAAF13PPbOwvh2Ao="
 							},
 							"name": "ostatioSprzatana",
+							"visibility": "private",
 							"type": "Date"
 						}
 					]
@@ -10593,6 +10597,7 @@
 								"$ref": "AAAAAAF13PiNvC9YloI="
 							},
 							"name": "kwota",
+							"visibility": "private",
 							"type": "Integer"
 						}
 					],
@@ -10881,6 +10886,7 @@
 								"$ref": "AAAAAAF13Pzz7Fsvtfo="
 							},
 							"name": "odpowiedzi",
+							"visibility": "private",
 							"type": "List<String>"
 						}
 					]
