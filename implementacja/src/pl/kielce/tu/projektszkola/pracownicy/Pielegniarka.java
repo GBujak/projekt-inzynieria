@@ -3,6 +3,12 @@ package pl.kielce.tu.projektszkola.pracownicy;
 
 import pl.kielce.tu.projektszkola.Pracownik;
 
-public class Pielegniarka extends Pracownik {
+import java.util.List;
 
+public class Pielegniarka extends Pracownik {
+    private List<Leczenie> leczenia;
+
+    public List<Leczenie> getLeczenie(){ return leczenia; }
+
+    public void setLeczenia(List<Leczenie> leczenia){ this.leczenia=leczenia; }
 }

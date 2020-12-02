@@ -1,5 +1,7 @@
 package pl.kielce.tu.projektszkola.pracownicy;
 
-public class Planista {
+import pl.kielce.tu.projektszkola.Pracownik;
+
+public class Planista extends Pracownik {
 
 }
