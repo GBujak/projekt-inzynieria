@@ -3,9 +3,14 @@ package pl.kielce.tu.projektszkola.zajecia;
 import java.util.Date;
 
 public class SalaLekcyjna {
-    private Integer iloscMiejsc;
-    private String nazwa;
+    private final Integer iloscMiejsc;
+    private final String nazwa;
     private Date ostatnioSprzatana;
+
+    public SalaLekcyjna(Integer iloscMiejsc, String nazwa){
+            this.iloscMiejsc = iloscMiejsc;
+            this.nazwa = nazwa;
+    }
 
     public Integer getIloscMiejsc() {
         return iloscMiejsc;
@@ -17,13 +22,5 @@ public class SalaLekcyjna {
 
     public Date getOstatnioSprzatana() {
         return ostatnioSprzatana;
-    }
-
-    public void setIloscMiejsc(Integer iloscMiejsc) {
-        this.iloscMiejsc = iloscMiejsc;
-    }
-
-    public void setNazwa(String nazwa) {
-        this.nazwa = nazwa;
     }
 }
