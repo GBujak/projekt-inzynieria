@@ -1,5 +1,7 @@
 package pl.kielce.tu.projektszkola.pracownicy;
 
-public class Dyrektor {
+import pl.kielce.tu.projektszkola.Pracownik;
+
+public class Dyrektor extends Pracownik {
 
 }
