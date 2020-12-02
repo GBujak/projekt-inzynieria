@@ -1,5 +1,7 @@
 package pl.kielce.tu.projektszkola.pracownicy;
 
-public class Wozny {
+import pl.kielce.tu.projektszkola.Pracownik;
+
+public class Wozny extends Pracownik {
 
 }
