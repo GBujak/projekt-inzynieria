@@ -1,4 +1,5 @@
 package pl.kielce.tu.projektszkola;
+// Grzegorz Bujak
 
 public class Pracownik extends Uzytkownik {
     private int zarobki;
