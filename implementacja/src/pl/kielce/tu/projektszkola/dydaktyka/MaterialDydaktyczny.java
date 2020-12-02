@@ -1,4 +1,5 @@
 package pl.kielce.tu.projektszkola.dydaktyka;
+// Grzegorz Bujak
 
 public class MaterialDydaktyczny {
     private String tytul;
