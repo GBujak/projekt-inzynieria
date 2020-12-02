@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Test {
+public class Test implements ITest{
 	
 	private String id;
 	private Date dataRozpoczecia;
@@ -56,18 +56,21 @@ public class Test {
 		this.limitCzasu = limitCzasu;
 	}
 	
+	@Override
 	public void dodajPytanie(String pytanie)
 	{
 		pytania.add(pytanie);
 	}
 	
+	@Override
 	public void udostepnij()
 	{
 		
 	}
 	
+	@Override
 	public void rozwiaz()
 	{
-		new Rozwiazanie();
+		rozwiazanie = new Rozwiazanie();
 	}
 }

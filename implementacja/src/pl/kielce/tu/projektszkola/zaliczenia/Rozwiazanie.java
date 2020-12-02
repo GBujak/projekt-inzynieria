@@ -3,7 +3,7 @@ package pl.kielce.tu.projektszkola.zaliczenia;
 
 import java.util.List;
 
-public class Rozwiazanie {
+public class Rozwiazanie implements IRozwiazanie{
 
 	private List<String> rozwiazania;
 	private Ocena ocena;
@@ -13,11 +13,13 @@ public class Rozwiazanie {
 		
 	}
 	
+	@Override
 	public void ocenRozwiazanie(int wartosc, String opis)
 	{
-		new Ocena(wartosc, opis);
+		ocena = new Ocena(wartosc, opis);
 	}
 	
+	@Override
 	public void dodajOdpowiedz(String odpowiedz)
 	{
 		rozwiazania.add(odpowiedz);
