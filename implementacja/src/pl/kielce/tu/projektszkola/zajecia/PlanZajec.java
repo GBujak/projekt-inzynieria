@@ -24,6 +24,15 @@ public class PlanZajec {
         dniGodzinyPrzedmioty.put(dniGodziny, przedmioty);
     }
 
+    public void wyswietl(){
+        if(czyZrobiony && czyZatwierdzony){
+            //implementacja wyswietlania planu
+        }
+        else{
+            //wyswietl komunikat "plan nie jest gotowy"
+        }
+    }
+
     public void setCzyZrobiony(boolean czyZrobiony) {
         this.czyZrobiony = czyZrobiony;
     }
