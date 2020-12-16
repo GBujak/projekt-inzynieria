@@ -11,7 +11,8 @@ public class Test implements ITest{
 	private Date dataRozpoczecia;
 	private int limitCzasu;
 	private List<String> pytania;
-	private Rozwiazanie rozwiazanie;
+	private IRozwiazanie rozwiazanie;
+	private boolean aktywny = false;
 	
 	public Test(String id, Date dataRozpoczecia, int limitCzasu, List<String> pytania)
 	{
@@ -65,12 +66,21 @@ public class Test implements ITest{
 	@Override
 	public void udostepnij()
 	{
-		
+		aktywny = true;
+	}
+	
+	@Override 
+	public void zamknijTest()
+	{
+		aktywny = false;
 	}
 	
 	@Override
 	public void rozwiaz()
 	{
-		rozwiazanie = new Rozwiazanie();
+		if(aktywny == true)
+			rozwiazanie = new Rozwiazanie();
+		else
+			System.out.println("Test nie jest aktywny. Nie można go rozwiązać.");
 	}
 }

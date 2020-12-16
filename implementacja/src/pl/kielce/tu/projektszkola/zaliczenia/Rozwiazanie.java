@@ -24,4 +24,5 @@ public class Rozwiazanie implements IRozwiazanie{
 	{
 		rozwiazania.add(odpowiedz);
 	}
+	
 }

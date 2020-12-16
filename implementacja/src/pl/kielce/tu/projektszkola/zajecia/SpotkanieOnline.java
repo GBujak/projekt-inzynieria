@@ -1,10 +1,10 @@
 package pl.kielce.tu.projektszkola.zajecia;
 
-import pl.kielce.tu.projektszkola.Uzytkownik;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import pl.kielce.tu.projektszkola.Uzytkownik;
 
 public class SpotkanieOnline {
     private Integer id;
@@ -24,7 +24,8 @@ public class SpotkanieOnline {
     public void zakoncz() {}
 
     public SpotkanieOnline utworz(String nazwa, Zajecie zajecie){
-        id = rd.nextInt();
+        Random rd = new Random();
+    	id = rd.nextInt();
         this.zajecie = zajecie;
         uczestnicy = new ArrayList<>(uczestnicy);
         setNazwa(nazwa);
