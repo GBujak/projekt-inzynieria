@@ -13,4 +13,5 @@ public class Uczen extends Uzytkownik {
     public void setNumerLegitymacji(int numerLegitymacji) {
         this.numerLegitymacji = numerLegitymacji;
     }
+    
 }
