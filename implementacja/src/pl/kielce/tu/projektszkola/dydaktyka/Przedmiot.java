@@ -9,9 +9,9 @@ import pl.kielce.tu.projektszkola.zaliczenia.Test;
 
 public class Przedmiot {
     private String nazwa;
-    private ITest test;
 
     private List<MaterialDydaktyczny> materialy;
+    private List<Test> testy;
     private List<Nauczyciel> nauczyciele;
 
     public String getNazwa() {
@@ -38,8 +38,15 @@ public class Przedmiot {
         this.nauczyciele = nauczyciele;
     }
 
-    public void dodajTest(String id, Date dataRozpoczecia, int limitCzasu, List<String> pytania)
-    {
-    	test = new Test(id, dataRozpoczecia, limitCzasu, pytania);
+    public List<Test> getTesty() {
+        return testy;
+    }
+
+    public void dodajTest(String id, Date dataRozpoczecia, int limitCzasu, List<String> pytania) {
+    	testy.add(new Test(id, dataRozpoczecia, limitCzasu, pytania));
+    }
+
+    public void dodajMaterialDydaktyczny(String tytul, String zawartosc) {
+        materialy.add(new MaterialDydaktyczny(tytul, zawartosc, this));
     }
 }

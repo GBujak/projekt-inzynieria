@@ -1,15 +1,25 @@
 package pl.kielce.tu.projektszkola.dydaktyka;
 // Grzegorz Bujak
 
+import pl.kielce.tu.projektszkola.zajecia.Zajecie;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Klasa {
     private String nazwa;
     private int rozmiarGrupy;
-
-    private List<Uczen> uczniowie;
     private Nauczyciel nauczyciel;
-    private List<Przedmiot> przedmioty;
+
+    private List<Uczen> uczniowie = new ArrayList<>();
+    private List<Przedmiot> przedmioty = new ArrayList<>();
+    private List<Zajecie> zajecia = new ArrayList<>();
+
+    public Klasa(String nazwa, int rozmiarGrupy, Nauczyciel nauczyciel) {
+        this.nazwa = nazwa;
+        this.rozmiarGrupy = rozmiarGrupy;
+        this.nauczyciel = nauczyciel;
+    }
 
     public String getNazwa() {
         return nazwa;
@@ -49,5 +59,13 @@ public class Klasa {
 
     public void setPrzedmioty(List<Przedmiot> przedmioty) {
         this.przedmioty = przedmioty;
+    }
+
+    public List<Zajecie> getZajecia() {
+        return zajecia;
+    }
+
+    public void setZajecia(List<Zajecie> zajecia) {
+        this.zajecia = zajecia;
     }
 }

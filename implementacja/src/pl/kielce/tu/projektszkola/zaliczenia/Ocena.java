@@ -11,4 +11,12 @@ public class Ocena {
 		this.wartosc = wartosc;
 		this.opis = opis;
 	}
+
+	public int getWartosc() {
+		return wartosc;
+	}
+
+	public String getOpis() {
+		return opis;
+	}
 }

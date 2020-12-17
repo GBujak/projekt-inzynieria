@@ -2,9 +2,9 @@ package pl.kielce.tu.projektszkola.zaliczenia;
 
 public interface ITest {
 	
-	public void dodajPytanie(String pytanie);
-	public void udostepnij();
-	public void rozwiaz();
-	public void zamknijTest();
+	void dodajPytanie(String pytanie);
+	void udostepnij();
+	void rozwiaz(Rozwiazanie rozwiazanie);
+	void zamknijTest();
 
 }

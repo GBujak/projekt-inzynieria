@@ -6,6 +6,12 @@ public class MaterialDydaktyczny {
     private String zawartosc;
     private Przedmiot przedmiot;
 
+    public MaterialDydaktyczny(String tytul, String zawartosc, Przedmiot przedmiot) {
+        this.tytul = tytul;
+        this.zawartosc = zawartosc;
+        this.przedmiot = przedmiot;
+    }
+
     public String getTytul() {
         return tytul;
     }

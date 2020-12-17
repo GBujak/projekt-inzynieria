@@ -2,13 +2,27 @@ package pl.kielce.tu.projektszkola.dydaktyka;
 // Grzegorz Bujak
 
 import pl.kielce.tu.projektszkola.Pracownik;
+import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Nauczyciel extends Pracownik {
     private String specjalizacja;
-    private List<Klasa> klasy;
-    private List<Przedmiot> przedmioty;
+    private List<Klasa> klasy = new ArrayList<>();
+    private List<Przedmiot> przedmioty = new ArrayList<>();
+
+    public List<Zajecie> najblizszeZajecia() {
+        var now = new Date();
+        return klasy.stream()
+                .flatMap(it -> it.getZajecia().stream())
+                .sorted(Comparator.comparing(Zajecie::getData))
+                .filter(it -> it.getData().after(now))
+                .collect(Collectors.toList());
+    }
 
     public String getSpecjalizacja() {
         return specjalizacja;

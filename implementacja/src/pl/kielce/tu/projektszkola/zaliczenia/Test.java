@@ -1,9 +1,12 @@
 package pl.kielce.tu.projektszkola.zaliczenia;
 // Damian Linek
 
+import pl.kielce.tu.projektszkola.dydaktyka.Uczen;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 public class Test implements ITest{
 	
@@ -11,7 +14,7 @@ public class Test implements ITest{
 	private Date dataRozpoczecia;
 	private int limitCzasu;
 	private List<String> pytania;
-	private IRozwiazanie rozwiazanie;
+	private List<Rozwiazanie> rozwiazania = new ArrayList<>();
 	private boolean aktywny = false;
 	
 	public Test(String id, Date dataRozpoczecia, int limitCzasu, List<String> pytania)
@@ -76,11 +79,17 @@ public class Test implements ITest{
 	}
 	
 	@Override
-	public void rozwiaz()
+	public void rozwiaz(Rozwiazanie rozwiazanie)
 	{
 		if(aktywny == true)
-			rozwiazanie = new Rozwiazanie();
+		    rozwiazania.add(rozwiazanie);
 		else
 			System.out.println("Test nie jest aktywny. Nie można go rozwiązać.");
+	}
+
+	public Optional<Rozwiazanie> rozwiazanieUcznia(Uczen uczen) {
+		return rozwiazania.stream()
+				.filter(it -> it.getUczen().equals(uczen))
+				.findFirst();
 	}
 }
