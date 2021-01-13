@@ -2,6 +2,7 @@ package pl.kielce.tu.projektszkola.pracownicy;
 //Arkadiusz Markowski
 import pl.kielce.tu.projektszkola.Pracownik;
 import pl.kielce.tu.projektszkola.zajecia.PlanProxy;
+import pl.kielce.tu.projektszkola.zajecia.ZatwierdzaniePlanu;
 
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class Dyrektor extends Pracownik {
     public void zatwierdzFakture() { ksiegowa.getFaktura().setCzyZatwierdzony(true); }
 
     public void zatwierdzPlan(){
-        PlanProxy planProxy = new PlanProxy(this);
-        planProxy.zatwierdzPlan();
+        ZatwierdzaniePlanu plan = new PlanProxy(this);
+        plan.zatwierdzPlan();
     }
 }
