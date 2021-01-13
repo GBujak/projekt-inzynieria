@@ -2,11 +2,8 @@ package pl.kielce.tu.projektszkola.zajecia;
 
 import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
-import pl.kielce.tu.projektszkola.zaliczenia.Test;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Zajecie {
     private Date data;

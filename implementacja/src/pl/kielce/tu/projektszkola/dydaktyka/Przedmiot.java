@@ -4,7 +4,6 @@ package pl.kielce.tu.projektszkola.dydaktyka;
 import java.util.Date;
 import java.util.List;
 
-import pl.kielce.tu.projektszkola.zaliczenia.ITest;
 import pl.kielce.tu.projektszkola.zaliczenia.Test;
 
 public class Przedmiot {
