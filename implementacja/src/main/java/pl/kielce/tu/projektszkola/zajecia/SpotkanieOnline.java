@@ -1,8 +1,10 @@
 package pl.kielce.tu.projektszkola.zajecia;
 
 import pl.kielce.tu.projektszkola.Uzytkownik;
+import pl.kielce.tu.projektszkola.dydaktyka.Uczen;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Random;
 
@@ -11,6 +13,7 @@ public class SpotkanieOnline {
     private String nazwa;
     private Zajecie zajecie;
     private List<Uzytkownik> uczestnicy;
+    private Zaproszenie zaproszenie;
 
     public SpotkanieOnline(){
 
@@ -45,5 +48,17 @@ public class SpotkanieOnline {
 
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
+    }
+
+    public void stworzZaproszenia()
+    {
+        List<String> adresyEmail = new ArrayList<String>();
+
+        for(Uczen u : zajecie.getKlasa().getUczniowie())
+        {
+            adresyEmail.add(u.getAdres());
+        }
+
+        zaproszenie = new Zaproszenie(id, nazwa, adresyEmail);
     }
 }

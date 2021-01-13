@@ -2,3 +2,6 @@ implementacja.iml
 .idea
 /bin/
 /target
+implementacja/src/.classpath
+implementacja/src/.project
+implementacja/src/.settings/
