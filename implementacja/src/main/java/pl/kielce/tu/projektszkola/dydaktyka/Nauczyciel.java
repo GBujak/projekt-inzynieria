@@ -2,8 +2,10 @@ package pl.kielce.tu.projektszkola.dydaktyka;
 // Grzegorz Bujak
 
 import pl.kielce.tu.projektszkola.Pracownik;
+import pl.kielce.tu.projektszkola.util.TerminZajec;
 import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
@@ -16,11 +18,10 @@ public class Nauczyciel extends Pracownik {
     private List<Przedmiot> przedmioty = new ArrayList<>();
 
     public List<Zajecie> najblizszeZajecia() {
-        var now = new Date();
         return klasy.stream()
                 .flatMap(it -> it.getZajecia().stream())
                 .sorted(Comparator.comparing(Zajecie::getData))
-                .filter(it -> it.getData().after(now))
+                .filter(it -> it.getData().jestPo(TerminZajec.teraz()))
                 .collect(Collectors.toList());
     }
 

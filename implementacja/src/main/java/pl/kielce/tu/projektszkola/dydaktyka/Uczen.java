@@ -2,10 +2,12 @@ package pl.kielce.tu.projektszkola.dydaktyka;
 // Grzegorz Bujak
 
 import pl.kielce.tu.projektszkola.Uzytkownik;
+import pl.kielce.tu.projektszkola.util.TerminZajec;
 import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 import pl.kielce.tu.projektszkola.zaliczenia.Rozwiazanie;
 import pl.kielce.tu.projektszkola.zaliczenia.Test;
 
+import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -17,10 +19,9 @@ public class Uczen extends Uzytkownik {
     private Klasa klasa;
 
     public List<Zajecie> najblizszeZajecia() {
-        var now = new Date();
         return klasa.getZajecia().stream()
                 .sorted(Comparator.comparing(Zajecie::getData))
-                .filter(it -> it.getData().after(now))
+                .filter(it -> it.getData().jestPo(TerminZajec.teraz()))
                 .collect(Collectors.toList());
     }
 

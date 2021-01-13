@@ -5,6 +5,7 @@ import pl.kielce.tu.projektszkola.util.TerminZajec;
 
 import java.time.DayOfWeek;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 class PlanZajecBuilderZajecie {
@@ -17,6 +18,8 @@ public class PlanZajecBuilder {
     private String ustawionaNazwaKlasy;
     private DayOfWeek ustawionyDzienTygodnia;
     private List<PlanZajecBuilderZajecie> tworzonyPlan = new ArrayList<>();
+
+    private HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> planZajec;
 
     public PlanZajecBuilder zNazwaKlasy(String nazwa) {
         this.ustawionaNazwaKlasy = nazwa;

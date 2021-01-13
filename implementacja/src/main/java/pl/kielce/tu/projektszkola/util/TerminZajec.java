@@ -1,6 +1,7 @@
 package pl.kielce.tu.projektszkola.util;
 
 import java.time.DayOfWeek;
+import java.time.LocalDateTime;
 
 public class TerminZajec implements Comparable<TerminZajec> {
     private DayOfWeek dzienTygodnia;
@@ -14,6 +15,15 @@ public class TerminZajec implements Comparable<TerminZajec> {
         this.dzienTygodnia = dzienTygodnia;
         this.godzina = godzina;
         this.minuta = minuta;
+    }
+
+    public static TerminZajec teraz() {
+        var terazDateTime = LocalDateTime.now();
+        return new TerminZajec(
+                terazDateTime.getDayOfWeek(),
+                terazDateTime.getHour(),
+                terazDateTime.getMinute()
+        );
     }
 
     public DayOfWeek getDzienTygodnia() {
