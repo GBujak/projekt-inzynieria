@@ -5,6 +5,7 @@ import pl.kielce.tu.projektszkola.Pracownik;
 import java.util.List;
 
 public class Ksiegowa extends Pracownik {
+    /*
     private List<Faktura> faktury;
     private Faktura faktura;
 
@@ -21,4 +22,5 @@ public class Ksiegowa extends Pracownik {
         faktura.Nabywca =  Nabywca;
         faktura.CzyZatwierdzony =  CzyZatwierdzony;
     }
+     */
 }
