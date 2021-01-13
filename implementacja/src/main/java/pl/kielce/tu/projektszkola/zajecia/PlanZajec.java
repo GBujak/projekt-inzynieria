@@ -9,19 +9,13 @@ import java.util.HashMap;
 import java.util.List;
 
 public class PlanZajec {
-
-    private Klasa klasa; //ktorej klasy dotyczy ten plan
-
-    HashMap< List<DayOfWeek>, List<LocalTime> > dniGodziny = new HashMap<>();
-    HashMap< HashMap< List<DayOfWeek>, List<LocalTime>>, List<Przedmiot> > dniGodzinyPrzedmioty = new HashMap<>();
-
+    // string - nazwa klasy
+    HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> plan;
     private boolean czyZrobiony;
     private boolean czyZatwierdzony;
 
-    public void zapisz(Klasa klasa, List<DayOfWeek> dni, List<LocalTime> godziny, List<Przedmiot> przedmioty){
-        this.klasa = klasa;
-        dniGodziny.put(dni, godziny);
-        dniGodzinyPrzedmioty.put(dniGodziny, przedmioty);
+    public PlanZajec( HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> plan) {
+        this.plan = plan;
     }
 
     public void wyswietl(){
@@ -49,7 +43,4 @@ public class PlanZajec {
         return czyZrobiony;
     }
 
-    public Klasa getKlasa() {
-        return klasa;
-    }
 }
