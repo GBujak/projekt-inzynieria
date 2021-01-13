@@ -12,13 +12,13 @@ public class Ksiegowa extends Pracownik {
     public Faktuera getFaktura(){ return faktura; }
     public void setFaktury(List<Faktura> faktury) { this.faktury=faktury; }
     public void setFaktura(int numer, int NIP, String przedmiotTransakcji, Integer kwota, Date data, String Sprzedawca, String Nabywca, boolean CzyZatwierdzony){
-        int numer;
-        int NIP;
-        String przedmiotTransakcji;
-        Integer kwota;
-        Date data;
-        String Sprzedawca;
-        String Nabywca;
+        faktura.numer = numer;
+        faktura.NIP = NIP;
+        faktura.przedmiotTransakcji = przedmiotTransakcji;
+        faktura.kwota = kwota;
+        faktura.data = data;
+        faktura.Sprzedawca = Sprzedawca;
+        faktura.Nabywca =  Nabywca;
         faktura.CzyZatwierdzony =  CzyZatwierdzony;
     }
 }
