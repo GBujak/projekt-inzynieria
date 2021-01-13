@@ -10,7 +10,7 @@ public class Ksiegowa extends Pracownik {
     private Faktura faktura;
 
     public List<Faktura> getFaktury() { return faktury; }
-    public Faktuera getFaktura(){ return faktura; }
+    public Faktura getFaktura(){ return faktura; }
     public void setFaktury(List<Faktura> faktury) { this.faktury=faktury; }
     public void setFaktura(int numer, int NIP, String przedmiotTransakcji, int kwota, Date data, String Sprzedawca, String Nabywca, boolean CzyZatwierdzony){
         faktura.numer = numer;
