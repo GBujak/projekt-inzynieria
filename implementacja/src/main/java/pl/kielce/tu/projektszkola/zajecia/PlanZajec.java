@@ -1,21 +1,28 @@
 package pl.kielce.tu.projektszkola.zajecia;
 
-import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
-import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
-
 import java.time.DayOfWeek;
-import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.List;
 
 public class PlanZajec {
+    //singleton
+    private static PlanZajec plan;
+
     // string - nazwa klasy
-    HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> plan;
+    HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> terminyZajec;
     private boolean czyZrobiony;
     private boolean czyZatwierdzony;
 
-    public PlanZajec( HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> plan) {
-        this.plan = plan;
+    public void ustawTerminy( HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> terminyZajec) {
+        this.terminyZajec = terminyZajec;
+    }
+
+    //get singleton
+    public static PlanZajec getInstance(){
+        if(plan == null) {
+            plan = new PlanZajec();
+        }
+        return plan;
     }
 
     public void wyswietl(){
