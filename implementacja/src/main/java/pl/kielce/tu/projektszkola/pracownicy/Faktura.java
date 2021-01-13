@@ -11,6 +11,7 @@ public class Faktura {
     private Date data;
     private String Sprzedawca;
     private String Nabywca;
+    private boolean CzyZatwierdzony;
 
     public int getNumer(){ return numer; }
     public int getNIP(){ return NIP; }
@@ -19,6 +20,7 @@ public class Faktura {
     public Date getData(){ return data; }
     public String getSprzedawca(){ return Sprzedawca; }
     public String getNabywca(){ return Nabywca; }
+    public boolean getCzyZatwierdzony(){ return CzyZatwierdzony; }
 
     public int setNumer(int Numer){this.numer = Numer; }
     public int setNIP(int NIP){this.NIP = NIP; }
@@ -27,4 +29,5 @@ public class Faktura {
     public Date setData(Date data){ this.data = data; }
     public String setSprzedawca(String Sprzedawca){ this.Sprzedawca = Sprzedawca; }
     public String setNabywca(String Nabywca){ this.Nabywca = Nabywca; }
+    public boolean setCzyZatwierdzony(boolean CzyZatwierdzony){ this.CzyZatwierdzony = CzyZatwierdzony; }
 }
