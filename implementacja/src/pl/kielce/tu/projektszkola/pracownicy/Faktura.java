@@ -4,14 +4,14 @@ package pl.kielce.tu.projektszkola.pracownicy;
 import java.util.Date;
 
 public class Faktura {
-    private int numer;
-    private int NIP;
-    private String przedmiotTransakcji;
-    private Integer kwota;
-    private Date data;
-    private String Sprzedawca;
-    private String Nabywca;
-    private boolean CzyZatwierdzony;
+    public int numer;
+    public int NIP;
+    public String przedmiotTransakcji;
+    public Integer kwota;
+    public Date data;
+    public String Sprzedawca;
+    public String Nabywca;
+    public boolean CzyZatwierdzony;
 
     public int getNumer(){ return numer; }
     public int getNIP(){ return NIP; }
