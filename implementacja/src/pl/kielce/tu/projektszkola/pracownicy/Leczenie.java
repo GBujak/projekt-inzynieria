@@ -9,9 +9,9 @@ public class Leczenie {
     private String opis;
     private Pielegniarka pielegniarka;
 
-    public int setNrLegitymacji(int nrLegitymacji) {this.nrLegitymacji = nrLegitymacji; }
-    public Date setData(String Data) {this.data = Data; }
-    public String setOpis(String Opis) {this.opis = Opis; }
+    public void setNrLegitymacji(int nrLegitymacji) {this.nrLegitymacji = nrLegitymacji; }
+    public void setData(Date Data) {this.data = Data; }
+    public void setOpis(String Opis) {this.opis = Opis; }
     public void setPielegniarka(Pielegniarka pielegniarka) { this.pielegniarka=pielegniarka; }
     public String pobierzOpis(int nrLegitymacji){ return opis; }
     public Pielegniarka getPielegniarka() { return pielegniarka; }
