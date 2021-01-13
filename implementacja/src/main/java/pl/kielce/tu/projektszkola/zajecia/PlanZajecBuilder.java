@@ -1,16 +1,16 @@
 package pl.kielce.tu.projektszkola.zajecia;
 // Grzegorz Bujak
 
+import pl.kielce.tu.projektszkola.util.TerminZajec;
+
 import java.time.DayOfWeek;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 class PlanZajecBuilderZajecie {
     public String nazwaPrzedmiotu;
     public String nazwaKlasy;
-    public DayOfWeek dzienTygodnia;
-    public LocalTime godzina;
+    public TerminZajec terminZajecia;
 }
 
 public class PlanZajecBuilder {
@@ -28,23 +28,23 @@ public class PlanZajecBuilder {
         return this;
     }
 
-    public PlanZajecBuilder zZajeciem(LocalTime czas, String nazwaPrzedmiotu) {
+    public PlanZajecBuilder zZajeciem(int godzina, int minuta, String nazwaPrzedmiotu) {
         if (ustawionaNazwaKlasy == null)
             throw new IllegalStateException("Builder: nieustawiona nazwa klasy");
         if (ustawionyDzienTygodnia == null)
             throw new IllegalStateException("Builder: nieustawiony dzien tygodnia");
 
+        var nowyTermin = new TerminZajec(this.ustawionyDzienTygodnia, godzina, minuta);
+
         for (var zajecieZPlanu: tworzonyPlan) {
-            if (zajecieZPlanu.dzienTygodnia.equals(ustawionyDzienTygodnia)
-             && zajecieZPlanu.nazwaKlasy.equals(ustawionaNazwaKlasy)
-             && zajecieZPlanu.godzina.getHour() == czas.getHour())
+            if (zajecieZPlanu.nazwaKlasy.equals(this.ustawionaNazwaKlasy)
+             && zajecieZPlanu.terminZajecia.pokrywaSie(nowyTermin))
                 throw new IllegalStateException("Builder: zajęcia się pokrywają");
         }
 
         var zajecie = new PlanZajecBuilderZajecie();
         zajecie.nazwaKlasy = ustawionaNazwaKlasy;
-        zajecie.dzienTygodnia = ustawionyDzienTygodnia;
-        zajecie.godzina = czas;
+        zajecie.terminZajecia = nowyTermin;
         zajecie.nazwaPrzedmiotu = nazwaPrzedmiotu;
 
         tworzonyPlan.add(zajecie);
