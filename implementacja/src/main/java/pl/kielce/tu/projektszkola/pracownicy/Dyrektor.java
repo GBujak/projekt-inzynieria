@@ -9,7 +9,7 @@ public class Dyrektor extends Pracownik {
     private Faktura faktura;
     private Planista planista;
 
-    public List<Faktura> getFaktury() { return faktury; }
+    public List<Faktura> getFaktury() { return ksiegowa.getFaktury(); }
     public void zatwierdzFakture() { ksiegowa.getFaktura().setCzyZatwierdzony(true); }
     public void zatwierdzPlan(){
         planista.getPlan().setCzyZatwierdzony(true);
