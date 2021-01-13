@@ -22,12 +22,12 @@ public class Faktura {
     public String getNabywca(){ return Nabywca; }
     public boolean getCzyZatwierdzony(){ return CzyZatwierdzony; }
 
-    public int setNumer(int Numer){this.numer = Numer; }
-    public int setNIP(int NIP){this.NIP = NIP; }
-    public String setPrzedmiotTransakcji(String przedmiotTransakcji){this.przedmiotTransakcji = przedmiotTransakcji; }
-    public int setKwota(int kwota){ this.kwota = kwota; }
-    public Date setData(Date data){ this.data = data; }
-    public String setSprzedawca(String Sprzedawca){ this.Sprzedawca = Sprzedawca; }
-    public String setNabywca(String Nabywca){ this.Nabywca = Nabywca; }
-    public boolean setCzyZatwierdzony(boolean CzyZatwierdzony){ this.CzyZatwierdzony = CzyZatwierdzony; }
+    public void setNumer(int Numer){this.numer = Numer; }
+    public void setNIP(int NIP){this.NIP = NIP; }
+    public void setPrzedmiotTransakcji(String przedmiotTransakcji){this.przedmiotTransakcji = przedmiotTransakcji; }
+    public void setKwota(int kwota){ this.kwota = kwota; }
+    public void setData(Date data){ this.data = data; }
+    public void setSprzedawca(String Sprzedawca){ this.Sprzedawca = Sprzedawca; }
+    public void setNabywca(String Nabywca){ this.Nabywca = Nabywca; }
+    public void setCzyZatwierdzony(boolean CzyZatwierdzony){ this.CzyZatwierdzony = CzyZatwierdzony; }
 }
