@@ -8,11 +8,7 @@ public class Planista extends Pracownik {
     private PlanZajec plan;
 
     public void zaplanuj(){
-        plan = new PlanZajec();
-        //implementacja tworzenia planu
-        // (przy tworzeniu planu mozna zastosowac wzorzec Buildera)
-        //plan.zapisz();
-        plan.setCzyZrobiony(true);
+        // uzywaj planzajecbuilder
     }
 
     public PlanZajec getPlan() {

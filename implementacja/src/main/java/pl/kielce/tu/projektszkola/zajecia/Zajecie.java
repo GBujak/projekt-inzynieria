@@ -2,12 +2,11 @@ package pl.kielce.tu.projektszkola.zajecia;
 
 import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
-
-import java.util.Date;
+import pl.kielce.tu.projektszkola.util.TerminZajec;
 
 public class Zajecie {
-    private Date data;
-    private Integer czas;
+    private TerminZajec data;
+    private Integer czasTrwania;
     private SalaLekcyjna salaLekcyjna;
     private Klasa klasa;
     private Przedmiot przedmiot;
@@ -16,28 +15,28 @@ public class Zajecie {
         return salaLekcyjna;
     }
 
-    public Zajecie(Date data, Integer czas, SalaLekcyjna sala, Klasa klasa, Przedmiot przedmiot) {
+    public Zajecie(TerminZajec data, Integer czasTrwania, SalaLekcyjna sala, Klasa klasa, Przedmiot przedmiot) {
         this.data = data;
-        this.czas = czas;
+        this.czasTrwania = czasTrwania;
         this.klasa = klasa;
         this.przedmiot = przedmiot;
         salaLekcyjna = sala;
     }
 
-    public Date getData() {
+    public TerminZajec getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(TerminZajec data) {
         this.data = data;
     }
 
-    public Integer getCzas() {
-        return czas;
+    public Integer getCzasTrwania() {
+        return czasTrwania;
     }
 
-    public void setCzas(Integer czas) {
-        this.czas = czas;
+    public void setCzasTrwania(Integer czasTrwania) {
+        this.czasTrwania = czasTrwania;
     }
 
     public void setSalaLekcyjna(SalaLekcyjna salaLekcyjna) {
