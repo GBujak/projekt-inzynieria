@@ -7,10 +7,16 @@ import org.junit.jupiter.api.TestInstance;
 import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Nauczyciel;
 import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
+import pl.kielce.tu.projektszkola.util.TerminZajec;
+import pl.kielce.tu.projektszkola.zajecia.PlanZajec;
 import pl.kielce.tu.projektszkola.zajecia.PlanZajecBuilder;
 import pl.kielce.tu.projektszkola.zajecia.SalaLekcyjna;
+import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
 import java.time.DayOfWeek;
+import java.time.Month;
+import java.util.List;
+import java.util.Map;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class PlanZajecBuilderTest {
@@ -55,6 +61,23 @@ public class PlanZajecBuilderTest {
                         .wSaliLekcyjnej(salaLekcyjna2)
                         .zZajeciem(11, 30)
         );
+
+        var plan = builder.buduj();
+        var planTestowyMapa = Map.of(
+                "11a", Map.of(
+                        DayOfWeek.MONDAY, List.of(new Zajecie(
+                                new TerminZajec(DayOfWeek.MONDAY, 10, 45), 45, salaLekcyjna1, klasa1, przedmiot)),
+                        DayOfWeek.TUESDAY, List.of(new Zajecie(
+                                new TerminZajec(DayOfWeek.TUESDAY, 11, 30), 45, salaLekcyjna1, klasa1, przedmiot))
+                ),
+                "11b", Map.of(
+                        DayOfWeek.TUESDAY, List.of(new Zajecie(
+                                new TerminZajec(DayOfWeek.TUESDAY, 11, 30), 45, salaLekcyjna2, klasa2, przedmiot))
+                ));
+        var planTestowy = new PlanZajec();
+        planTestowy.ustawTerminy(planTestowyMapa);
+
+        Assertions.assertEquals(planTestowy, plan);
     }
 
     @Test

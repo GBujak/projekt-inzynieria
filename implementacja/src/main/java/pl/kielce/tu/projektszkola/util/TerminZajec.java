@@ -2,6 +2,7 @@ package pl.kielce.tu.projektszkola.util;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class TerminZajec implements Comparable<TerminZajec> {
     private DayOfWeek dzienTygodnia;
@@ -55,6 +56,19 @@ public class TerminZajec implements Comparable<TerminZajec> {
             return Integer.compare(godzina, terminZajec.getGodzina());
         else
             return Integer.compare(minuta, terminZajec.getMinuta());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TerminZajec that = (TerminZajec) o;
+        return godzina == that.godzina && minuta == that.minuta && dzienTygodnia == that.dzienTygodnia;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dzienTygodnia, godzina, minuta);
     }
 
     public boolean jestPo(TerminZajec inne) {

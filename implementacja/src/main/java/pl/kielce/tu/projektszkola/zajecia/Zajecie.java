@@ -4,6 +4,8 @@ import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
 import pl.kielce.tu.projektszkola.util.TerminZajec;
 
+import java.util.Objects;
+
 public class Zajecie {
     private TerminZajec data;
     private Integer czasTrwania;
@@ -57,5 +59,29 @@ public class Zajecie {
 
     public void setPrzedmiot(Przedmiot przedmiot) {
         this.przedmiot = przedmiot;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Zajecie zajecie = (Zajecie) o;
+        return Objects.equals(data, zajecie.data) && Objects.equals(czasTrwania, zajecie.czasTrwania) && Objects.equals(salaLekcyjna, zajecie.salaLekcyjna) && Objects.equals(klasa, zajecie.klasa) && Objects.equals(przedmiot, zajecie.przedmiot);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(data, czasTrwania, salaLekcyjna, klasa, przedmiot);
+    }
+
+    @Override
+    public String toString() {
+        return "Zajecie{" +
+                "data=" + data +
+                ", czasTrwania=" + czasTrwania +
+                ", salaLekcyjna=" + salaLekcyjna +
+                ", klasa=" + klasa +
+                ", przedmiot=" + przedmiot +
+                '}';
     }
 }

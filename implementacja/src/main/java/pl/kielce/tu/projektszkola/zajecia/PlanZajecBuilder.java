@@ -6,10 +6,7 @@ import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
 import pl.kielce.tu.projektszkola.util.TerminZajec;
 
 import java.time.DayOfWeek;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class PlanZajecBuilder {
     private Klasa ustawionaKlasa;
@@ -18,7 +15,7 @@ public class PlanZajecBuilder {
     private SalaLekcyjna ustawionaSala;
     private Przedmiot ustawionyPrzedmiot;
 
-    private HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> planZajec;
+    private Map<String, Map<DayOfWeek, List<Zajecie>>> planZajec;
 
     public PlanZajecBuilder zCzasemTrwania(int czas) {
         if (czas < 1) throw new IllegalArgumentException("Builder: błędny czas trwania");
