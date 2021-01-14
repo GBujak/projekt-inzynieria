@@ -10,8 +10,8 @@ public class PlanZajec {
 
     // string - nazwa klasy
     HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> terminyZajec;
-    private boolean czyZrobiony;
-    private boolean czyZatwierdzony;
+    protected boolean czyZrobiony;
+    protected boolean czyZatwierdzony;
 
     public void ustawTerminy( HashMap<String, HashMap<DayOfWeek, List<Zajecie>>> terminyZajec) {
         this.terminyZajec = terminyZajec;
@@ -27,19 +27,15 @@ public class PlanZajec {
 
     public void wyswietl(){
         if(czyZrobiony && czyZatwierdzony){
-            //implementacja wyswietlania planu
+            System.out.println("Zawartosc planu: ");
         }
         else{
-            //wyswietl komunikat "plan nie jest gotowy"
+            System.out.println("Plan nie jest jeszcze gotowy!");
         }
     }
 
     public void setCzyZrobiony(boolean czyZrobiony) {
         this.czyZrobiony = czyZrobiony;
-    }
-
-    public void setCzyZatwierdzony(boolean czyZatwierdzony) {
-        this.czyZatwierdzony = czyZatwierdzony;
     }
 
     public boolean isCzyZatwierdzony() {
@@ -49,5 +45,4 @@ public class PlanZajec {
     public boolean isCzyZrobiony() {
         return czyZrobiony;
     }
-
 }
