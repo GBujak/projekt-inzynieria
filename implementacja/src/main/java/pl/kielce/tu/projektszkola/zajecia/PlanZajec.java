@@ -1,5 +1,7 @@
 package pl.kielce.tu.projektszkola.zajecia;
 
+import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
+
 import java.time.DayOfWeek;
 import java.util.HashMap;
 import java.util.List;
@@ -44,5 +46,9 @@ public class PlanZajec {
 
     public boolean isCzyZrobiony() {
         return czyZrobiony;
+    }
+
+    public HashMap<DayOfWeek, List<Zajecie>> zajeciaKlasy(Klasa klasa) {
+        return terminyZajec.get(klasa.getNazwa());
     }
 }

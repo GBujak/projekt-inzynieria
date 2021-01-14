@@ -1,10 +1,14 @@
 package pl.kielce.tu.projektszkola.dydaktyka;
 // Grzegorz Bujak
 
+import pl.kielce.tu.projektszkola.zajecia.PlanZajec;
 import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Klasa {
     private String nazwa;
@@ -13,12 +17,18 @@ public class Klasa {
 
     private List<Uczen> uczniowie = new ArrayList<>();
     private List<Przedmiot> przedmioty = new ArrayList<>();
-    private List<Zajecie> zajecia = new ArrayList<>();
 
     public Klasa(String nazwa, int rozmiarGrupy, Nauczyciel nauczyciel) {
         this.nazwa = nazwa;
         this.rozmiarGrupy = rozmiarGrupy;
         this.nauczyciel = nauczyciel;
+    }
+
+    public List<Zajecie> getZajecia() {
+        return PlanZajec.getInstance().zajeciaKlasy(this)
+                .values().stream()
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
     }
 
     public String getNazwa() {
@@ -61,11 +71,16 @@ public class Klasa {
         this.przedmioty = przedmioty;
     }
 
-    public List<Zajecie> getZajecia() {
-        return zajecia;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Klasa klasa = (Klasa) o;
+        return Objects.equals(nazwa, klasa.nazwa);
     }
 
-    public void setZajecia(List<Zajecie> zajecia) {
-        this.zajecia = zajecia;
+    @Override
+    public int hashCode() {
+        return Objects.hash(nazwa);
     }
 }
