@@ -1,7 +1,7 @@
 package pl.kielce.tu.projektszkola.zajecia.planzajec;
 
 public class PlanException extends Exception {
-    String msg;
+    private final String msg;
 
     PlanException(String msg){
         this.msg = msg;

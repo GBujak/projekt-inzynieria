@@ -1,6 +1,7 @@
 package pl.kielce.tu.projektszkola.pracownicy;
 //Arkadiusz Markowski
 import pl.kielce.tu.projektszkola.Pracownik;
+import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanException;
 import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanProxy;
 import pl.kielce.tu.projektszkola.zajecia.ZatwierdzaniePlanu;
 import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanZajec;
@@ -14,7 +15,7 @@ public class Dyrektor extends Pracownik {
     public List<Faktura> getFaktury() { return ksiegowa.getFaktury(); }
     public void zatwierdzFakture() { ksiegowa.getFaktura().setCzyZatwierdzony(true); }
 
-    public void zatwierdzPlan() {
+    public void zatwierdzPlan() throws PlanException {
         var proxy = PlanZajec.getInstance(this);
         proxy.zatwierdzPlan();
     }
