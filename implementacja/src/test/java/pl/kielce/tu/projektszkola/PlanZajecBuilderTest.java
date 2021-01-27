@@ -8,13 +8,12 @@ import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Nauczyciel;
 import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
 import pl.kielce.tu.projektszkola.util.TerminZajec;
-import pl.kielce.tu.projektszkola.zajecia.PlanZajec;
+import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanZajecImpl;
 import pl.kielce.tu.projektszkola.zajecia.PlanZajecBuilder;
 import pl.kielce.tu.projektszkola.zajecia.SalaLekcyjna;
 import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
 import java.time.DayOfWeek;
-import java.time.Month;
 import java.util.List;
 import java.util.Map;
 
@@ -74,7 +73,7 @@ public class PlanZajecBuilderTest {
                         DayOfWeek.TUESDAY, List.of(new Zajecie(
                                 new TerminZajec(DayOfWeek.TUESDAY, 11, 30), 45, salaLekcyjna2, klasa2, przedmiot))
                 ));
-        var planTestowy = new PlanZajec();
+        var planTestowy = new PlanZajecImpl();
         planTestowy.ustawTerminy(planTestowyMapa);
 
         Assertions.assertEquals(planTestowy, plan);

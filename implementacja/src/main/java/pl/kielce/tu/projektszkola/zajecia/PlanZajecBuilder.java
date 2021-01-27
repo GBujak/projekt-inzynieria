@@ -4,6 +4,7 @@ package pl.kielce.tu.projektszkola.zajecia;
 import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
 import pl.kielce.tu.projektszkola.util.TerminZajec;
+import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanZajecImpl;
 
 import java.time.DayOfWeek;
 import java.util.*;
@@ -94,8 +95,8 @@ public class PlanZajecBuilder {
         return this;
     }
 
-    public PlanZajec buduj() {
-        var nowyPlan = new PlanZajec();
+    public PlanZajecImpl buduj() {
+        var nowyPlan = new PlanZajecImpl();
         nowyPlan.ustawTerminy(this.planZajec);
         this.planZajec = null;
         return nowyPlan;

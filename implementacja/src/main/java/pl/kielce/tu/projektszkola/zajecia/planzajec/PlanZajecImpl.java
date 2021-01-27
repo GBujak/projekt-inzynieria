@@ -1,16 +1,16 @@
-package pl.kielce.tu.projektszkola.zajecia;
+package pl.kielce.tu.projektszkola.zajecia.planzajec;
 
+import pl.kielce.tu.projektszkola.Uzytkownik;
 import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
+import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
 import java.time.DayOfWeek;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-public class PlanZajec {
-    //singleton
-    private static PlanZajec plan;
+public class PlanZajecImpl implements PlanZajec {
+    static PlanZajecImpl plan;
 
     // string - nazwa klasy
     Map<String, Map<DayOfWeek, List<Zajecie>>> terminyZajec;
@@ -22,11 +22,22 @@ public class PlanZajec {
     }
 
     //get singleton
-    public static PlanZajec getInstance(){
+    public static PlanZajec getInstance(Uzytkownik uzytkownik) {
         if(plan == null) {
-            plan = new PlanZajec();
+            plan = new PlanZajecImpl();
         }
-        return plan;
+
+        return new PlanProxy(uzytkownik, plan);
+    }
+
+    @Override
+    public void zatwierdzPlan() {
+        this.czyZatwierdzony = true;
+    }
+
+    @Override
+    public void ustawPlan(PlanZajecImpl nowyPlan) {
+        plan = nowyPlan;
     }
 
     public void wyswietl(){
@@ -58,7 +69,7 @@ public class PlanZajec {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        PlanZajec planZajec = (PlanZajec) o;
+        PlanZajecImpl planZajec = (PlanZajecImpl) o;
         return Objects.equals(terminyZajec, planZajec.terminyZajec);
     }
 
