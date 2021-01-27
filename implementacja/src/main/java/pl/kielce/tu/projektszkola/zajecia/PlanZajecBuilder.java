@@ -96,6 +96,9 @@ public class PlanZajecBuilder {
     }
 
     public PlanZajecImpl buduj() {
+        if (this.planZajec == null)
+            throw new IllegalStateException("Builder: nie ustawiono ani jednego zajęcia");
+
         var nowyPlan = new PlanZajecImpl();
         nowyPlan.ustawTerminy(this.planZajec);
         this.planZajec = null;
