@@ -41,8 +41,12 @@ public class PlanZajecImpl implements PlanZajec {
     }
 
     public void wyswietl() throws PlanException {
-        if(!czyZrobiony || !czyZatwierdzony){
-            throw new PlanException("Plan nie jest jeszcze gotowy.");
+        if(!czyZrobiony){
+            throw new PlanException("Plan nie jest jeszcze zrobiony.");
+        }
+
+        if(!czyZatwierdzony){
+            throw new PlanException("Plan nie jest jeszcze zatwierdzony.");
         }
     }
 

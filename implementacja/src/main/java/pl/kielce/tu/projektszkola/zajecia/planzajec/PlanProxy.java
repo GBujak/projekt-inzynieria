@@ -24,10 +24,10 @@ public class PlanProxy implements PlanZajec {
     }
 
     @Override
-    public void zatwierdzPlan() {
+    public void zatwierdzPlan() throws PlanException {
         if (uzytkownik instanceof Dyrektor)
             planZajec.zatwierdzPlan();
-        else throw new IllegalStateException("Zatwierdzanie planu nie przez dyrektora");
+        else throw new PlanException("Zatwierdzanie planu nie przez dyrektora");
     }
 
     public Map<DayOfWeek, List<Zajecie>> zajeciaKlasy(Klasa klasa) {
@@ -35,10 +35,10 @@ public class PlanProxy implements PlanZajec {
     }
 
     @Override
-    public void ustawPlan(PlanZajecImpl nowyPlan) {
+    public void ustawPlan(PlanZajecImpl nowyPlan) throws PlanException {
         if (uzytkownik instanceof Planista)
             planZajec.ustawPlan(nowyPlan);
-        else throw new IllegalStateException("Nie-planista ustawia plan");
+        else throw new PlanException("Nie-planista ustawia plan");
     }
 
     @Override

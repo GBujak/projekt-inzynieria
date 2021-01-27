@@ -13,9 +13,9 @@ public interface PlanZajec {
         return PlanZajecImpl.getInstance(uzytkownik);
     }
 
-    void zatwierdzPlan();
+    void zatwierdzPlan() throws PlanException;
     boolean isCzyZatwierdzony();
-    void ustawPlan(PlanZajecImpl nowyPlan);
+    void ustawPlan(PlanZajecImpl nowyPlan) throws PlanException;
 
     Map<DayOfWeek, List<Zajecie>> zajeciaKlasy(Klasa klasa);
 }
