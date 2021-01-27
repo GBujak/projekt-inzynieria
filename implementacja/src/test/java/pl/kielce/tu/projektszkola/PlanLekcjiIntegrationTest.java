@@ -1,5 +1,6 @@
 package pl.kielce.tu.projektszkola;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pl.kielce.tu.projektszkola.dydaktyka.Klasa;
 import pl.kielce.tu.projektszkola.dydaktyka.Nauczyciel;
@@ -7,6 +8,7 @@ import pl.kielce.tu.projektszkola.dydaktyka.Przedmiot;
 import pl.kielce.tu.projektszkola.dydaktyka.Uczen;
 import pl.kielce.tu.projektszkola.pracownicy.Dyrektor;
 import pl.kielce.tu.projektszkola.pracownicy.Planista;
+import pl.kielce.tu.projektszkola.util.TerminZajec;
 import pl.kielce.tu.projektszkola.zajecia.PlanZajecBuilder;
 import pl.kielce.tu.projektszkola.zajecia.SalaLekcyjna;
 
@@ -44,6 +46,15 @@ public class PlanLekcjiIntegrationTest {
         planista.zaplanuj(plan);
         dyrektor.zatwierdzPlan();
 
-        System.out.println(uczen.getKlasa().getZajecia());
+        var zajecia = uczen.getKlasa().getZajecia();
+
+        Assertions.assertEquals(1, zajecia.size());
+
+        var zajecie = zajecia.get(0);
+
+        Assertions.assertEquals(przedmiot, zajecie.getPrzedmiot());
+        Assertions.assertEquals(klasa, zajecie.getKlasa());
+        Assertions.assertEquals(salaLekcyjna, zajecie.getSalaLekcyjna());
+        Assertions.assertEquals(new TerminZajec(DayOfWeek.MONDAY, 12, 30), zajecie.getData());
     }
 }
