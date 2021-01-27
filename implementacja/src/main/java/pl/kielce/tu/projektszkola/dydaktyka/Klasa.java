@@ -1,7 +1,8 @@
 package pl.kielce.tu.projektszkola.dydaktyka;
 // Grzegorz Bujak
 
-import pl.kielce.tu.projektszkola.zajecia.PlanZajec;
+import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanZajec;
+import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanZajecImpl;
 import pl.kielce.tu.projektszkola.zajecia.Zajecie;
 
 import java.util.ArrayList;
@@ -25,7 +26,7 @@ public class Klasa {
     }
 
     public List<Zajecie> getZajecia() {
-        return PlanZajec.getInstance().zajeciaKlasy(this)
+        return PlanZajec.getInstance(null).zajeciaKlasy(this)
                 .values().stream()
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
