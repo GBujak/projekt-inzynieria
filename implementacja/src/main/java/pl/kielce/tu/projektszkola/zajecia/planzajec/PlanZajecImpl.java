@@ -40,12 +40,9 @@ public class PlanZajecImpl implements PlanZajec {
         plan = nowyPlan;
     }
 
-    public void wyswietl(){
-        if(czyZrobiony && czyZatwierdzony){
-            System.out.println("Zawartosc planu: ");
-        }
-        else{
-            System.out.println("Plan nie jest jeszcze gotowy!");
+    public void wyswietl() throws PlanException {
+        if(!czyZrobiony || !czyZatwierdzony){
+            throw new PlanException("Plan nie jest jeszcze gotowy.");
         }
     }
 
