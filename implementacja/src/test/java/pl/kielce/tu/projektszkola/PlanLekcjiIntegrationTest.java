@@ -11,6 +11,7 @@ import pl.kielce.tu.projektszkola.pracownicy.Planista;
 import pl.kielce.tu.projektszkola.util.TerminZajec;
 import pl.kielce.tu.projektszkola.zajecia.PlanZajecBuilder;
 import pl.kielce.tu.projektszkola.zajecia.SalaLekcyjna;
+import pl.kielce.tu.projektszkola.zajecia.planzajec.PlanException;
 
 import java.time.DayOfWeek;
 import java.util.List;
@@ -43,8 +44,12 @@ public class PlanLekcjiIntegrationTest {
                 .zZajeciem(12, 30)
                 .buduj();
 
-        planista.zaplanuj(plan);
-        dyrektor.zatwierdzPlan();
+        try {
+            planista.zaplanuj(plan);
+            dyrektor.zatwierdzPlan();
+        } catch (PlanException e) {
+            e.printStackTrace();
+        }
 
         var zajecia = uczen.getKlasa().getZajecia();
 
